@@ -156,6 +156,6 @@ npm run test:perf:soak
 | Phase | Status | Contents |
 |-------|--------|----------|
 | 1 | ✅ Complete | target-server + API tests (Jest + SuperTest) |
-| 2 | 🔜 Planned | Playwright E2E (admin dashboard UI) |
+| 2 | � In Progress | Playwright E2E → whatodo (Next.js + Vitest + Playwright) |
 | 3 | ✅ Complete | k6 performance tests + chaos engineering + AWS profiling server |
 | 4 | 🔜 Planned | GitHub Actions CI/CD pipeline |

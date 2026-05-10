@@ -6,6 +6,7 @@
   "workspaces": [
     "apps/target-server",
     "apps/aws-profiling-server",
+    "apps/whatodo",
     "tests/api"
   ],
   "scripts": {
