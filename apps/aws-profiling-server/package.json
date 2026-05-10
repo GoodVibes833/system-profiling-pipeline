@@ -1,0 +1,22 @@
+{
+  "name": "aws-profiling-server",
+  "version": "1.0.0",
+  "description": "AWS-integrated profiling server with fault injection, S3, RDS, SQS, and Cost Explorer",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cost-explorer": "^3.1042.0",
+    "@aws-sdk/client-s3": "^3.1042.0",
+    "@aws-sdk/client-secrets-manager": "^3.1042.0",
+    "@aws-sdk/client-sqs": "^3.1042.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}

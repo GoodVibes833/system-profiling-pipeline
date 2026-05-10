@@ -1,0 +1,22 @@
+{
+  "name": "sdet-portfolio-lab",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SDET portfolio monorepo: API, E2E, performance, chaos engineering, and cloud profiling",
+  "workspaces": [
+    "apps/target-server",
+    "apps/aws-profiling-server",
+    "tests/api"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=apps/target-server",
+    "dev": "npm run dev --workspace=apps/target-server",
+    "dev:aws": "npm run dev --workspace=apps/aws-profiling-server",
+    "test:api": "npm run test --workspace=tests/api",
+    "test": "npm run test:api",
+    "test:perf:smoke": "k6 run tests/performance/k6-scenarios.js -e TEST_TYPE=smoke -e TARGET_URL=http://localhost:3002",
+    "test:perf:stress": "k6 run tests/performance/k6-scenarios.js -e TEST_TYPE=stress -e TARGET_URL=http://localhost:3002",
+    "test:perf:spike": "k6 run tests/performance/k6-scenarios.js -e TEST_TYPE=spike -e TARGET_URL=http://localhost:3002",
+    "test:perf:soak": "k6 run tests/performance/k6-scenarios.js -e TEST_TYPE=soak -e TARGET_URL=http://localhost:3002"
+  }
+}
